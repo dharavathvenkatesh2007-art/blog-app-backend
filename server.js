@@ -12,10 +12,15 @@ config();
 //create express app
 const app = exp();
 //enable cors
+// enable cors
 app.use(cors({
-  origin:['http://localhost:5173'],
-  credentials:true
-}))
+  origin: [
+    "http://localhost:5173",                // local dev
+    "https://blog-frontend-ten-pearl.vercel.app" // deployed frontend
+  ],
+  credentials: true
+}));
+
 //add cookie parser middeleware
 app.use(cookieParser())
 //body parser middleware
