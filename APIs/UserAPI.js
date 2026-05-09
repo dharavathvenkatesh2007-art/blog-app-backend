@@ -12,7 +12,7 @@ userApp.get("/articles", verifyToken("USER"), async (req, res) => {
 });
 
 //Add comment to an article
-userApp.put("/comment", verifyToken("USER"), async (req, res) => {
+userApp.put("/articles", verifyToken("USER"), async (req, res) => {
   //get body from req
   const { articleId, comment } = req.body;
   //check article
