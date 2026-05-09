@@ -16,7 +16,8 @@ const app = exp();
 app.use(cors({
   origin: [
     "http://localhost:5173",                // local dev
-    "https://blog-frontend-git-main-dharavathvenkatesh2007-arts-projects.vercel.app" // deployed frontend
+    "https://blog-frontend-git-main-dharavathvenkatesh2007-arts-projects.vercel.app" 
+    ,"https://blog-frontend-ten-pearl.vercel.app/"// deployed frontend
   ],
   credentials: true
 }));
