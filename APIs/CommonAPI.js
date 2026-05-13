@@ -108,13 +108,11 @@ commonApp.post("/login", async (req, res) => {
 
 //Route for Logout
 commonApp.get("/logout", (req, res) => {
-  //delete token from cookie storage
   res.clearCookie("token", {
     httpOnly: true,
-    secure: false,
-    sameSite: "lax",
+    secure: true,       // must be true on HTTPS
+    sameSite: "none",   // required for cross‑site cookies
   });
-  //send res
   res.status(200).json({ message: "Logout success" });
 });
 
